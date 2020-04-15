@@ -16,7 +16,10 @@ https://jp.heroku.com/
 vi .env
 ```
 ```
+// 環境名。[local || production]
 ENV=
+// localの場合…[ HOST:localhost , PORT:5432, NAME:[yourDB] , USER:[yourDBUser] , PASSWORD:[youDBPassword]
+// productionの場合…作成したherokuアプリが自動設定したDB情報を取得して設定する(後述)
 DATABASE_HOST=  
 DATABASE_PORT=  
 DATABASE_NAME=  
