@@ -7,10 +7,11 @@ import org.jetbrains.exposed.sql.transactions.transaction
 
 class DBInitializer {
 
-    fun execute() {
+    fun init() {
         if(EnvConstants.ENV == "local") {
             val url = "jdbc:postgresql://${EnvConstants.DATABASE_HOST}:${EnvConstants.DATABASE_PORT}/${EnvConstants.DATABASE_NAME}"
             Database.connect(url, DRIVER, EnvConstants.DATABASE_USER, EnvConstants.DATABASE_PASSWORD)
+            println(url)
         }
 
         transaction {

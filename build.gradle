@@ -42,6 +42,7 @@ dependencies {
     implementation "io.ktor:ktor-server-netty:$ktor_version"
     implementation "ch.qos.logback:logback-classic:$logback_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+    implementation "io.ktor:ktor-jackson:$ktor_version"
     compile 'org.jetbrains.exposed:exposed:0.10.2'
     compile group: 'org.postgresql', name: 'postgresql', version: '9.4-1201-jdbc41'
     implementation 'io.github.cdimascio:java-dotenv:5.1.3'

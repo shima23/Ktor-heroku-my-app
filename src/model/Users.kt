@@ -28,8 +28,8 @@ fun User.toData(): UserData {
         id = id.value,
         name = name,
         age = age,
-        createdAt = createdAt,
-        updatedAt = updatedAt
+        createdAt = createdAt.toString("yyyy/MM/dd HH:mm:ss.SSS"),
+        updatedAt = updatedAt.toString("yyyy/MM/dd HH:mm:ss.SSS")
     )
 }
 
@@ -37,6 +37,6 @@ data class UserData(
     var id: Int,
     var name: String,
     var age: Int,
-    var createdAt: DateTime,
-    var updatedAt: DateTime
+    var createdAt: String,
+    var updatedAt: String
 )
