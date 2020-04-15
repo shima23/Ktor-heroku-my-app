@@ -5,7 +5,6 @@ import org.jetbrains.exposed.dao.IntEntity
 import org.jetbrains.exposed.dao.IntEntityClass
 import org.jetbrains.exposed.dao.IntIdTable
 import org.jetbrains.exposed.sql.CurrentDateTime
-import org.joda.time.DateTime
 
 object Users : IntIdTable("users") {
     val name = varchar("name", 100)
