@@ -9,7 +9,9 @@ class DBInitializer {
 
     fun init() {
         val url = "jdbc:postgresql://${EnvConstants.DATABASE_HOST}:${EnvConstants.DATABASE_PORT}/${EnvConstants.DATABASE_NAME}"
-        Database.connect(url, DRIVER, EnvConstants.DATABASE_USER, EnvConstants.DATABASE_PASSWORD)
+        val db =Database.connect(url, DRIVER, EnvConstants.DATABASE_USER, EnvConstants.DATABASE_PASSWORD)
+        println(url)
+        println(db)
 
         transaction {
             SchemaUtils.create(
