@@ -28,7 +28,7 @@ fun Application.module(testing: Boolean = false) {
     DBInitializer().init()
     routing {
         get("/" ) {
-            call.respond("Hello World")
+            call.respond("Hello World!!")
         }
 
         get("/users") {
